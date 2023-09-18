@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/null">
     <link rel="icon" type="image/png" href="/null">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-    <title>2023-8-31 - 小吴博客</title>
+    <title>JavaSE 数据类型与运算 - 小吴博客</title>
     
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     
@@ -18,7 +18,7 @@
     <meta name="description" content="">
     <meta name="author" content="wgy">
     <meta name="keywords" content="">
-    <meta property="og:title" content="2023-8-31"/>
+    <meta property="og:title" content="JavaSE 数据类型与运算"/>
     <style>
 
 
@@ -463,7 +463,7 @@ header .header__right .dropdown-menus .dropdown-menu {
 <article class="page">
 <div id="post-meta-m">
     <div class="post-meta" id="post-meta">
-  <h3>2023-8-31</h3>
+  <h3>JavaSE 数据类型与运算</h3>
     
       <span class="post-meta-label">
         wgy
@@ -472,8 +472,8 @@ header .header__right .dropdown-menus .dropdown-menu {
     
       <span class="post-meta-label">
         <span class="p-dot"></span>
-        <time datetime="2023-08-31 15:09" pubdate>
-          2023-08-31
+        <time datetime="2023-09-18 09:02" pubdate>
+          2023-09-18
         </time>
       </span>
     
@@ -481,7 +481,7 @@ header .header__right .dropdown-menus .dropdown-menu {
       
       <span class="post-meta">
         <span class="p-dot"></span>
-        共 70 字
+        共 1.2k 字
       </span>
     
     
@@ -492,18 +492,218 @@ header .header__right .dropdown-menus .dropdown-menu {
 <div class="article-m">
   <div class="post-toc">
     
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">测试二级标题</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-number">2.</span> <span class="toc-text">标识符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-number">2.1.</span> <span class="toc-text">命名规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">2.2.</span> <span class="toc-text">命名规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text">基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.2.</span> <span class="toc-text">引用数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%AE%A1%E7%AE%97"><span class="toc-number">3.3.</span> <span class="toc-text">类型计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.4.</span> <span class="toc-text">类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.4.1.</span> <span class="toc-text">强制类型转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.4.2.</span> <span class="toc-text">自动类型转换</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%95%E5%B1%82%E5%AD%98%E5%82%A8"><span class="toc-number">4.</span> <span class="toc-text">计算机底层存储</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%88%B6"><span class="toc-number">4.1.</span> <span class="toc-text">进制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.1.1.</span> <span class="toc-text">进制转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%A0%81-%E5%8F%8D%E7%A0%81-%E8%A1%A5%E7%A0%81"><span class="toc-number">4.2.</span> <span class="toc-text">原码,反码,补码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">5.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">5.1.</span> <span class="toc-text">算数运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">5.2.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">5.3.</span> <span class="toc-text">比较运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">5.4.</span> <span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">5.5.</span> <span class="toc-text">位运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97"><span class="toc-number">5.6.</span> <span class="toc-text">条件运算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>
     
   </div>
     <div id="article">
       <div id="post-content" class="markdown-body textretty">
-        <p>今天搭建好了我的博客网站,现在进行一些测试多多包涵.</p>
-<p>测试跳转链接 <a target="_blank" rel="noopener" href="https://hexo.io/">hexo</a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 测试代码块高亮</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">helloWorld</span><span class="params">()</span>&#123;</span><br><span class="line">  System.out.println(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>测试图片</strong><br><img src="/../2023-8-31/2023-08-31-15-14-44.png"></p>
-<h2 id="测试二级标题"><a href="#测试二级标题" class="headerlink" title="测试二级标题"></a>测试二级标题</h2><p>我是一段普通的测试句</p>
-
+        <h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
+<li>java 运行过程中内置的一些单词或者是保留字</li>
+</ul>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><ul>
+<li><h3 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h3><ul>
+<li>由 26 个字母大小写,数字,_,$组成</li>
+<li>数字不能开头</li>
+<li>严格区分大小写,不能为关键字但是可以包含关键字 例如 publishList</li>
+</ul>
+</li>
+<li><h3 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h3><ul>
+<li>类名遵循大驼峰方式 例如 HelloTest.class</li>
+<li>包名全小写</li>
+<li>方法名遵循小驼峰方式 例如 send</li>
+<li>常量全大写并且用下划线连接 例如 COUNT_MAX</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li><h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><ul>
+<li><strong>byte</strong><ul>
+<li>1 字节 8bit 2^8</li>
+</ul>
+</li>
+<li><strong>short</strong><ul>
+<li>2 字节 16bit 2^16</li>
+</ul>
+</li>
+<li><strong>int</strong><ul>
+<li>4 字节 32bit 2^32</li>
+</ul>
+</li>
+<li><strong>long</strong><ul>
+<li>8 字节 64bit 2^64</li>
+<li>定义的时候需要在末尾加上’l’或’L’方便与 int 进行区分 例如 long num&#x3D;123L</li>
+</ul>
+</li>
+<li><strong>char</strong><ul>
+<li>2 字节</li>
+<li>只能输入一个字符例如 char ca&#x3D; ‘a’</li>
+<li>可以输入数字或者其他转义字符等 char n&#x3D;97 char a&#x3D;’\u0006’</li>
+<li>可以和其他类型进行运算操作</li>
+</ul>
+</li>
+<li><strong>float</strong><ul>
+<li>4 字节 -3.4<em>10(-38)～ 3.4</em>10(38)</li>
+<li>定义的时候需要在末尾加上’F’或’f’方便与 double 进行区分 例如 float num&#x3D;12.3f</li>
+</ul>
+</li>
+<li><strong>double</strong><ul>
+<li>8 字节 -1.7<em>10(-308)～ 1.7</em>10(308)</li>
+</ul>
+</li>
+<li><strong>boolean</strong><ul>
+<li>1bit</li>
+<li>只用存 true or false</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h3><ul>
+<li>String</li>
+<li>接口</li>
+<li>类</li>
+<li>枚举</li>
+<li>注解</li>
+<li>数组</li>
+<li>集合</li>
+<li>……</li>
+</ul>
+</li>
+<li><h3 id="类型计算"><a href="#类型计算" class="headerlink" title="类型计算"></a>类型计算</h3><ol>
+<li>整数定义变量默认为 int 类型 int a&#x3D;123</li>
+<li>小数定义变量默认为 double 类型 double d&#x3D;3.14</li>
+<li>char 可以和其他整数基本类型进行计算操作 如 char b&#x3D;123+’a’</li>
+<li>char,byte,short 参与的计算都会自动转换成 int 类型 byte a&#x3D;12 int b&#x3D;a+’a’</li>
+</ol>
+</li>
+<li><h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><ul>
+<li><h4 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h4><ul>
+<li><p>从大类型转换为小类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> d=<span class="number">3.14</span>;</span><br><span class="line"><span class="type">float</span> f= (<span class="type">float</span>)d;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浮点型转换成整数类型可能会存在精度丢失问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> d=<span class="number">3.14</span>;</span><br><span class="line"><span class="type">int</span> i= (<span class="type">int</span>)d;   <span class="number">3</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h4 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h4><ul>
+<li><p>从小类型转换为大类型执行顺序为</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">byte</span>,<span class="type">short</span>,<span class="type">char</span>-&gt;<span class="type">int</span>-&gt;<span class="type">long</span>-&gt;<span class="type">float</span>-&gt;<span class="type">double</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="计算机底层存储"><a href="#计算机底层存储" class="headerlink" title="计算机底层存储"></a>计算机底层存储</h2><ul>
+<li><h3 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h3><ul>
+<li><p><strong>二进制</strong></p>
+<ul>
+<li>由 0,1 组成</li>
+<li>计算机中储存的形式为二进制</li>
+<li>9 1001 6 110</li>
+</ul>
+</li>
+<li><p><strong>八进制</strong></p>
+<ul>
+<li>由 0-7 数字组成，为了区分与其他进制的数字区别，开头都是以 0 开始</li>
+</ul>
+</li>
+<li><p><strong>十六进制</strong></p>
+<ul>
+<li>由 0-9 和 A-F 组成。为了区分于其他数字的区别，开头都是以 0x 开始</li>
+</ul>
+</li>
+<li><h4 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h4><ul>
+<li><p>十进制转换成二进制</p>
+<ul>
+<li>将十进制的数跟 2 进行取余最后逆序排列</li>
+</ul>
+</li>
+<li><p>二进制转换成十进制</p>
+<ul>
+<li>将二进制的数从右到左 位数*2^(n-1)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1001</span> -&gt; (<span class="number">1</span>*<span class="number">2</span>^<span class="number">3</span>)+(<span class="number">0</span>*<span class="number">2</span>^<span class="number">2</span>)+(<span class="number">0</span>*<span class="number">2</span>^<span class="number">1</span>)+(<span class="number">1</span>*<span class="number">2</span>^<span class="number">0</span>) -&gt; <span class="number">9</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>二进制转换成八进制</p>
+<ul>
+<li>将二进制三个分为一组进行二进制相加</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1001</span> -&gt; (<span class="number">1</span>*<span class="number">2</span>^<span class="number">0</span>)[(<span class="number">0</span>*<span class="number">2</span>^<span class="number">2</span>)+(<span class="number">0</span>*<span class="number">2</span>^<span class="number">1</span>)+(<span class="number">1</span>*<span class="number">2</span>^<span class="number">0</span>)] -&gt; <span class="number">011</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>二进制转换成十六进制</p>
+<ul>
+<li>将二进制四个分为一组进行二进制相加</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1001</span> -&gt; [(<span class="number">1</span>*<span class="number">2</span>^<span class="number">3</span>)+(<span class="number">0</span>*<span class="number">2</span>^<span class="number">2</span>)+(<span class="number">0</span>*<span class="number">2</span>^<span class="number">1</span>)+(<span class="number">1</span>*<span class="number">2</span>^<span class="number">0</span>)] -&gt; ox9</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="原码-反码-补码"><a href="#原码-反码-补码" class="headerlink" title="原码,反码,补码"></a>原码,反码,补码</h3><ul>
+<li><p><strong>原码</strong></p>
+<ul>
+<li>二进制数据</li>
+<li>得到反码和补码的基础</li>
+</ul>
+</li>
+<li><p><strong>反码</strong></p>
+<ul>
+<li>在二进制的基础上最左边符号位不动其他位置取反</li>
+</ul>
+</li>
+<li><p><strong>补码</strong></p>
+<ul>
+<li>在反码的基础上最左边符号位和其他位置都不变只+1</li>
+<li>计算机中储存的是补码,计算的时候也是使用补码进行计算</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
+<li><h3 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h3><ul>
+<li>+, - , * , &#x2F; , % , (前)++ , ++(后) , (前)– , –(后)</li>
+<li>(前)++ 先+1 再计算</li>
+<li>++(后) 先计算再++</li>
+</ul>
+</li>
+<li><h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><ul>
+<li>&#x3D; , +&#x3D; , -&#x3D; , *&#x3D; , %&#x3D;</li>
+<li>当&#x3D;两侧数据类型不一致的时候,可以进行自动类型转换或者强制类型转换处理</li>
+<li>支持连续赋值</li>
+<li>+&#x3D; , -&#x3D; , *&#x3D; , %&#x3D; 操作不会改变本身的数据类型</li>
+</ul>
+</li>
+<li><h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><ul>
+<li>&#x3D;&#x3D; , !&#x3D; , &gt;&#x3D; , &lt;&#x3D; , &gt; , &lt; , instanceof</li>
+<li>instanceof 是面向多态中的知识</li>
+<li>&#x3D;&#x3D; , !&#x3D; , &gt;&#x3D; , &lt;&#x3D; , &gt; , &lt; 适用于基本数据类型(&gt;&#x3D; , &lt;&#x3D; , &gt; , &lt;不能适用 boolean 类型)</li>
+<li>&#x3D;&#x3D; , !&#x3D; 可以适用于引用数据类型</li>
+<li>区分 &#x3D;&#x3D; , &#x3D;</li>
+</ul>
+</li>
+<li><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><ul>
+<li>&amp; , &amp;&amp; , | , || , ! , ^</li>
+<li>&amp; 与 &amp;&amp; 区别 &amp;&amp;为短路与当前一个条件判断为 false 的时候则不执行下一个判断条件直接给出 false</li>
+<li>| 与 || 区别 ||为短路或当前一个条件判断为 true 的时候则不执行下一个判断条件直接给出 true</li>
+<li>! 取反</li>
+<li>^ 异或 当比较双方有且只有一个 true 的时候返回 true 其他都返回 false</li>
+</ul>
+</li>
+<li><h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><ul>
+<li>&lt;&lt; , &gt;&gt; , &gt;&gt;&gt; , &amp; , | , ^ , ~</li>
+<li>计算性能会更高</li>
+<li>2 &lt;&lt; 3 : 2*2^3</li>
+<li>2 &gt;&gt; 3 : 2&#x2F;2^3</li>
+<li>-2 &gt;&gt;&gt; 3 : -(2&#x2F;2^3)</li>
+</ul>
+</li>
+<li><h3 id="条件运算"><a href="#条件运算" class="headerlink" title="条件运算"></a>条件运算</h3><ul>
+<li>三目运算</li>
+<li>(x &gt; y) ? x : y 解释 如果 x 大于 y 那么就选择 x 否则选择 y</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>
       </div>
     </div>
 </div>
@@ -513,12 +713,14 @@ header .header__right .dropdown-menus .dropdown-menu {
     <div id="p-meta-i">
         
               
-                <a class="hover-with-bg" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+                <a class="hover-with-bg" href="/categories/%E5%A4%8D%E4%B9%A0/">复习</a>
               
           
           
               
-                <a class="hover-with-bg" href="/tags/hexo/"># hexo</a>
+                <a class="hover-with-bg" href="/tags/javaSE/"># javaSE</a>
+              
+                <a class="hover-with-bg" href="/tags/java/"># java</a>
               
           
     </div>
@@ -541,7 +743,7 @@ header .header__right .dropdown-menus .dropdown-menu {
 
   <div class="post-copyright">
     <p style="margin: 5px 0;">文章作者：<a href="/">wgy</a></p>
-    <p style="margin: 5px 0;">文章链接：<a href="http://wucoder.github.io/2023/08/31/2023-8-31/">http://wucoder.github.io/2023/08/31/2023-8-31/</a></p>
+    <p style="margin: 5px 0;">文章链接：<a href="http://wucoder.github.io/2023/09/18/JavaSE-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E8%BF%90%E7%AE%97/">http://wucoder.github.io/2023/09/18/JavaSE-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E8%BF%90%E7%AE%97/</a></p>
     <p style="margin: 5px 0;">版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处，谢谢。</p>
   </div>
   

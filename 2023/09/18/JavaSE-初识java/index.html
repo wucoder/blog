@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/null">
     <link rel="icon" type="image/png" href="/null">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-    <title>标签 - java - 小吴博客</title>
+    <title>JavaSE 初识java - 小吴博客</title>
     
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     
@@ -18,7 +18,7 @@
     <meta name="description" content="">
     <meta name="author" content="wgy">
     <meta name="keywords" content="">
-    <meta property="og:title" content="标签 - java"/>
+    <meta property="og:title" content="JavaSE 初识java"/>
     <style>
 
 
@@ -461,33 +461,133 @@ header .header__right .dropdown-menus .dropdown-menu {
             
 
 <article class="page">
-  <div class="archive-list">
-    <p class="h4">共计 2 篇文章</p>
-    <hr>
+<div id="post-meta-m">
+    <div class="post-meta" id="post-meta">
+  <h3>JavaSE 初识java</h3>
+    
+      <span class="post-meta-label">
+        wgy
+      </span>
+    
+    
+      <span class="post-meta-label">
+        <span class="p-dot"></span>
+        <time datetime="2023-09-18 08:56" pubdate>
+          2023-09-18
+        </time>
+      </span>
     
     
       
-        
-          
-          <p class="h5">2023</p>
-        
-        <a href="/2023/09/18/JavaSE-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E8%BF%90%E7%AE%97/" class="list-group-item list-group-item-action">
-          <span class="archive-post-title">JavaSE 数据类型与运算</span>
-          <time style="float: right;">09-18</time>
-        </a>
-      
+      <span class="post-meta">
+        <span class="p-dot"></span>
+        共 341 字
+      </span>
     
-      
-        
-        <a href="/2023/09/18/JavaSE-%E5%88%9D%E8%AF%86java/" class="list-group-item list-group-item-action">
-          <span class="archive-post-title">JavaSE 初识java</span>
-          <time style="float: right;">09-18</time>
-        </a>
-      
     
-
+    
+  </div>
+  
 </div>
+<div class="article-m">
+  <div class="post-toc">
+    
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C"><span class="toc-number">1.</span> <span class="toc-text">运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">2.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
+    
+  </div>
+    <div id="article">
+      <div id="post-content" class="markdown-body textretty">
+        <h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><ol>
+<li>创建一个 Hello.text 文件,将后缀改为.java</li>
+<li>编辑文件代码如下</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HelloChina</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;hello 中国!!!&quot;</span>);</span><br><span class="line">		System.out.print(<span class="string">&quot;hello 中国!!!&quot;</span>);</span><br><span class="line">		System.out.println(<span class="number">123</span>+<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>进入文件所在目录输入编译命令 javac Hello.java</li>
+<li>运行编译文件 java HelloChina</li>
+</ol>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ol>
+<li><p>java 注释种类</p>
+<ul>
+<li>单行注释 &#x2F;&#x2F;</li>
+<li>多行注释 &#x2F;* &#x2F;</li>
+<li>文档注释 &#x2F;** &#x2F;</li>
+</ul>
+</li>
+<li><p>注释的作用</p>
+<ol>
+<li>对程序中的代码做解释作用</li>
+<li>对程序进行调试</li>
+</ol>
+</li>
+<li><p>注意</p>
+<ul>
+<li>单行注释和多行注释不参与程序的编译,就是说你在代码中写再多的注释编译的时候都会去掉,但是文档注释会参加编译</li>
+<li>多行注释不能嵌套使用</li>
+</ul>
+</li>
+<li><p>文档注释</p>
+<ul>
+<li>文档注释内容会被 jdk 提供的工具 javadoc 识别解析,生成一套以网页文件形式体现的该程序说明文档</li>
+</ul>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>怎么解释 java 是半编译边运行语言?<ul>
+<li>解释重点在运行这一块,首先明确只有在 javac 编译完成生成了.class 的字节码文件才可以运行.所以在运行阶段 jvm 会读到整个.class 文件然后自行决定如果运行可能是一半一半的读和运行也可能是一整个读然后运行</li>
+</ul>
+</li>
+</ol>
+
+      </div>
+    </div>
+</div>
+
+<div class="post-category">
+
+    <div id="p-meta-i">
+        
+              
+                <a class="hover-with-bg" href="/categories/%E5%A4%8D%E4%B9%A0/">复习</a>
+              
+          
+          
+              
+                <a class="hover-with-bg" href="/tags/javaSE/"># javaSE</a>
+              
+                <a class="hover-with-bg" href="/tags/java/"># java</a>
+              
+          
+    </div>
+</div>
+
+
+<div class="post-footer">
+  
+  <div class="donate text-center">
+    <span>喜欢这篇文章？快来加群和作者一起学习</span>
+    <div class="donate-way">
+      
+        <a target="_blank" rel="noopener" href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=M0tzsMGoPFbMnHGCo0LqD2Od08tyCfAi&authKey=hr7ni%2FOrR40loa1PScMZoQEaRI4uVOMQDHIj%2BmYjfQDNywX9tGC6jqsX3yqmjAZa&noverify=0&group_code=781518182" class="donate-btn button">
+          加群
+        </a>
+      
+    </div>
+  </div>
+  
+
+  <div class="post-copyright">
+    <p style="margin: 5px 0;">文章作者：<a href="/">wgy</a></p>
+    <p style="margin: 5px 0;">文章链接：<a href="http://wucoder.github.io/2023/09/18/JavaSE-%E5%88%9D%E8%AF%86java/">http://wucoder.github.io/2023/09/18/JavaSE-%E5%88%9D%E8%AF%86java/</a></p>
+    <p style="margin: 5px 0;">版权声明：本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处，谢谢。</p>
+  </div>
+  
+</div>
+
 </article>
+
+
         </div>
         
 <footer class="text-center">
@@ -526,6 +626,12 @@ header .header__right .dropdown-menus .dropdown-menu {
 
 <div class="p-btn">
     
+        <a class="toc-btn" id="toc-btn"><i id="i-menu"></i></a>
+    
+    
+      <a class="toc-btn" id="share-btn"><i>
+        <svg t="1670124379155" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2683" width="25" height="25"><path d="M395.946667 234.666667v64H256v469.333333h512V522.666667h64V768a64 64 0 0 1-64 64H256a64 64 0 0 1-64-64V298.666667a64 64 0 0 1 64-64h139.946667z m335.850666-87.914667l150.848 150.826667-158.378666 158.4-45.269334-45.248L748.394667 341.333333H672c-121.685333 0-220.714667 97.024-223.914667 217.941334L448 565.333333v85.333334h-64v-85.333334C384 406.272 512.938667 277.333333 672 277.333333h99.861333l-85.312-85.333333 45.248-45.248z" p-id="2684" fill="var(--first-text-color)"></path></svg>
+      </i></a>
     
     <a href="javascript:window.scrollTo({top:0,behavior:'smooth'});" class="click-btn">
       <i id="i-up"></i>
@@ -560,10 +666,64 @@ header .header__right .dropdown-menus .dropdown-menu {
 </script>
 
 
+<script>
+    var postImg = document.querySelectorAll("article[class=page] img");
+    for (let imgi = 0; imgi < postImg.length; imgi++) {
+        postImg[imgi].onclick = () => {
+            let zoomImg = document.createElement("div");
+            zoomImg.id = "zoomImg";
+            zoomImg.innerHTML = `<div id="zoom-picture"></div>
+    <div class="poptrox-overlay"
+        style="position: fixed; left: 0px; top: 0px; z-index: 20000; width: 100%; height: 100%; text-align: center; cursor: zoom-out; opacity: 1;">
+        <div style="display:inline-block;height:100%;vertical-align:middle;"></div>
+        <div
+            style="position:absolute;left:0;top:0;width:100%;height:100%;background:#000000;opacity:0;filter:alpha(opacity=0);">
+        </div>
+        <div class="poptrox-popup"
+            style="display: inline-block; vertical-align: middle; position: relative; z-index: 1; cursor: zoom-out; min-width: 10px; min-height: 10px; width: auto; height: auto;">
+            <div class="loader" style="display: none;"></div>
+            <div class="pic" style="text-indent: 0px;"><img
+                    src="${ postImg[imgi].srcset || postImg[imgi].src }" alt="Loading..."
+                    style="vertical-align: bottom; max-width: 85vw; max-height: 85vh;"></div>
+        </div>
+    </div>`;
+            document.body.appendChild(zoomImg);
+                document.querySelector("#zoomImg").onclick = () => {
+                    document.querySelector("#zoomImg").remove();
+                }
+        }
+    }
+    
+</script>
 
 
 
 
+    <script>
+        query("#toc-btn")[0].onclick = () => {
+            if (query(".post-toc")[0].innerHTML) {
+                toggleClass(".post-toc", "display-inline");
+            }
+        }
+
+        if (!query(".post-toc")[0].innerHTML) {
+            addClass("#toc-btn","display-none");
+        }
+    </script>
+
+
+
+    <script>
+        query("#share-btn")[0].onclick = async () => {
+            let url = `${location.protocol}//${location.hostname}${location.port ? ":"+location.port:location.port}${location.pathname}#read=${sessionStorage.getItem(location.pathname+"_read_y") || ""}`;
+            try {
+                await navigator.clipboard.writeText(url);
+                prompt_core("分享链接已经复制至剪贴板", 4800, true);
+            } catch(e) {
+                prompt_core("分享链接复制失败，请手动复制<br/>"+url, 4800, false);
+            }
+        }
+    </script>
 
 
 
@@ -579,6 +739,45 @@ header .header__right .dropdown-menus .dropdown-menu {
     </script>
 
 
+
+    <script>
+        const getScrollPosition = (el = window) => ({
+            x: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft,
+            y: el.pageYOffset !== undefined ? el.pageYOffset : el.scrollTop
+        });
+        // 此处的 750 是「页面元素的最大宽度」
+        var wx = document.getElementsByClassName("article-m")[0].clientWidth;
+        var wy = document.getElementsByClassName("article-m")[0].clientHeight;
+        function windowScroll() {
+            // 反复修改 确保页面尺寸不改变
+            wx = document.getElementsByClassName("article-m")[0].clientWidth;
+            wy = document.getElementsByClassName("article-m")[0].clientHeight;
+            let y = Math.round(getScrollPosition().y);
+            // console.log(y);
+            // 组合字符串，同时记录页面坐标，页面宽度和高度
+            let p = `${y}:${wx}:${wy}`;
+            // 写入到 sessionStorage 中
+            sessionStorage.setItem(location.pathname + "_read_y", p);
+        }
+        // URL 中是否包含传递的坐标信息
+        setTimeout(() => {
+            if (location.hash.split("#read=").length > 1) {
+                prompt_core("已有阅读进度，正在跳转", 4800, true);
+                // 分离字符串
+                let read_y = location.hash.split("#read=")[1];
+                read_y = read_y.split(":");
+                // 组合乘积，顺滑移动至坐标
+                window.scrollTo({top: Math.round(Number(read_y[0]) * Number(read_y[1] * Number(read_y[2] / wx / wy))), behavior: "smooth"});
+            } else {
+                // 从 sessionStorage 中获取
+                let read_y = sessionStorage.getItem(location.pathname + "_read_y") || "0:0:0";
+                read_y = read_y.split(":");
+                if (read_y[0] != "0") prompt_core("已有阅读进度，正在跳转", 4800, true);
+                window.scrollTo({top: Math.round(Number(read_y[0]) * Number(read_y[1] * Number(read_y[2] / wx / wy))), behavior: "smooth"});
+            }
+        }, 500);
+        window.onscroll = windowScroll;
+    </script>
 
 
 
